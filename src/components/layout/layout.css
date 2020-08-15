@@ -1,0 +1,18 @@
+:root {
+    --light: #fffae6;
+    --dark: #353430;
+}
+
+html {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
