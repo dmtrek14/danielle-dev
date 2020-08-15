@@ -7,7 +7,7 @@ const Header = () => (
 <header>
     <nav>
         <ul>
-            <li>One</li>
+            <li>Menu</li>
         </ul>
     </nav>
 </header>

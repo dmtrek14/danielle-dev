@@ -1,11 +1,23 @@
+* {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+
 :root {
     --light: #fffae6;
     --dark: #353430;
+    --command: #880831;
+    --science:#2e4e68;
+    --ops: #d1872c; 
 }
 
 html {
-    background-color: var(--light);
-    color: var(--dark);
+    /* background-color: var(--light);
+    color: var(--dark); */
+    background-color: var(--dark);
+    color: var(--light);
 }
 
 body {
@@ -13,6 +25,25 @@ body {
     font-size: 1rem;
     margin: 0;
 }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans Condensed', sans-serif;
+}
+
+a {
+    /* color: var(--dark); */
+    color: var(--light);
+    font-weight:bold;
+    text-decoration: none;
+}
+
+main {
+    min-height:75vh;
+    padding: 0.6rem;
+}
+
+footer {
+    display: grid;
+    align-items: center;
+    text-align: center;
 }
