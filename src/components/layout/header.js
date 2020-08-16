@@ -22,6 +22,7 @@ const Header = () => {
 return (
     <header>
     <nav>
+        <a href="#main-content" class="skip">Skip to main content</a>
         <div className="site-name">
             <Link to="/">Danielle Mayabb</Link>
         </div>

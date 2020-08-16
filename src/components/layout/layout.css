@@ -120,7 +120,17 @@ nav  {
     grid-column-gap: 10px;
     grid-row-gap: 15px;
 }
-
+.skip {
+    position: absolute;
+    transform: translateY(-140%);
+    transition: transform 0.3s ease-in-out;
+}
+.skip:focus {
+    padding: 0.8rem .5rem;
+    /* transition: all 0.2s ease-in-out; */
+    transform: translateY(0%);
+    left: 20%;
+}
 main {
     min-height:75vh;
     grid-column-start: 2;

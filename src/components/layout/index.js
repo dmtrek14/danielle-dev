@@ -19,7 +19,7 @@ const Layout = ({ children}) => {
         <>
             <Header/>
             <div className="container">
-                <main id="main-content">
+                <main id="main-content" tabindex="-1">
                     {children}
                 </main>
             </div>    
