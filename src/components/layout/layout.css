@@ -119,7 +119,6 @@ nav  {
     grid-template-rows: auto 1fr auto;
     grid-column-gap: 10px;
     grid-row-gap: 15px;
-    
 }
 
 main {
