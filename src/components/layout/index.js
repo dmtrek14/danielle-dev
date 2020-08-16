@@ -18,9 +18,11 @@ const Layout = ({ children}) => {
     return (
         <>
             <Header/>
+            <div className="container">
                 <main id="main-content">
                     {children}
                 </main>
+            </div>    
             <Footer/>
         </>
     )
