@@ -6,7 +6,7 @@ import { faCode, faCoffee, faHeart } from '@fortawesome/free-solid-svg-icons'
 const Footer = () => (
 <footer>
     <div>
-        © {new Date().getFullYear()}  <a href="https://github.com/dmtrek14">@dmtrek14</a>          
+        © {new Date().getFullYear()}  <a href="https://github.com/dmtrek14">Danielle Mayabb</a>          
     </div>
     <div>
         Built with &nbsp;
