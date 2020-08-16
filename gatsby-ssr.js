@@ -1,7 +1,8 @@
 const React = require('react')
 
 exports.onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents([
+  setPreBodyComponents([  
+    <noscript key="noscript">Your browser has javascript disabled or doesn't support javascript.</noscript>,
     React.createElement('script', {
       dangerouslySetInnerHTML: {
         __html: `

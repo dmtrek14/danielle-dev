@@ -1,9 +1,5 @@
 import React, { useState, useEffect }  from "react"
 import { Link } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle, faDotCircle } from '@fortawesome/free-solid-svg-icons'
-
-
 
 const Header = () => {
     let websiteTheme
@@ -27,7 +23,7 @@ return (
     <header>
     <nav>
         <div className="site-name">
-            <Link to="/">Danielle M.</Link>
+            <Link to="/">Danielle Mayabb</Link>
         </div>
         <div className="site-links">
             <Link to="/Portfolio">Portfolio</Link>

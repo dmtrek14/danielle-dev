@@ -67,7 +67,7 @@ nav  {
     display: grid;
     grid-auto-flow: column;
     grid-gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.2rem;
 }
 
 .site-name {
@@ -114,9 +114,6 @@ main {
     background-color: var(--dark) !important;
     border: 2px solid var(--ops);
 }
-/* body.dark > #themeToggle .fa {
-   
-} */
 
 footer {
     border-top: 1px solid var(--dark);
