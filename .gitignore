@@ -68,7 +68,7 @@ typings/
 
 # gatsby files
 .cache/
-public
+public/
 
 
 # parcel-bundler cache (https://parceljs.org/)
