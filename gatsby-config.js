@@ -19,7 +19,10 @@ module.exports = {
         background_color: "#fffae6",
         theme_color: "#353430",
         display: "standalone",
-       // icon: "src/images/icon.png",
+        icon: "src/images/icon.png",
+        icon_options: {
+          purpose: `maskable`
+        }
         //crossOrigin: `anonymous`
       }
     },
