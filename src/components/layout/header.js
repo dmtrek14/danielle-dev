@@ -22,12 +22,18 @@ const Header = () => {
 return (
     <header>
     <nav>
+        <a href="#main-content" class="skip">Skip to main content</a>
+        <div>
+          <img class="nav-photo" src={`profile-photo.jpg`} alt="headshot of Danielle"/>
+        </div>
         <div className="site-name">
             <Link to="/">Danielle Mayabb</Link>
         </div>
+        <div className="site-name-short">
+          <Link to="/">DM</Link>
+        </div>
         <div className="site-links">
-            <Link to="/Portfolio">Portfolio</Link>
-            <Link to="/Experience">Experience</Link>
+            <Link to="/Work">Work</Link>
             <Link to="/About">About</Link>
             <span>
                 <button onClick={ThemeToggle} className={theme === 'dark' ? "toggle dark-toggle" : "toggle light-toggle"} >                  
