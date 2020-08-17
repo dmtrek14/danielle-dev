@@ -56,7 +56,7 @@ body header {
 }
 body header nav {
   display: grid;
-  grid-template-columns: 7vw 30vw auto;
+  grid-template-columns: 7vw 28vw auto;
   grid-auto-flow: column;
   grid-gap: 0.5rem;
   padding: 0.5rem 1.2rem;
@@ -69,7 +69,12 @@ body header nav .skip {
 body header nav .skip:focus {
   padding: 0.8rem 0.5rem;
   transform: translateY(0%);
-  left: 20%;
+  left: 12%;
+}
+@media (min-width: 768px) {
+  body header nav .skip:focus {
+    left: 40%;
+  }
 }
 body header nav .nav-photo {
   border-radius: 50%;
@@ -145,8 +150,8 @@ body .container {
 }
 @media (max-width: 768px) {
   body .container {
-    grid-template-columns: 100vw;
-    justify-items: center;
+    grid-template-columns: 95vw;
+    max-width: 95vw;
   }
 }
 body .container main {
@@ -157,7 +162,6 @@ body .container main {
   body .container main {
     grid-column-start: 1;
     padding: 1rem;
-    justify-self: center;
   }
 }
 body .container main .social {
