@@ -16,12 +16,12 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-display: swap;
     font-size: 1rem;
     margin: 0;
     height: 100vh;
     background-color: @light;
     color: @dark;
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
 
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Open Sans Condensed', sans-serif;
@@ -34,13 +34,18 @@ body {
     a {
         color: @dark;
         font-weight:bold;
-        text-decoration: underline;
+        text-decoration: none;
         
         &:focus, &:hover {
             outline: 2px dashed @dark;
         }
     }
     
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
     .sr-only {
         position: absolute;
         width: 1px;
@@ -158,7 +163,7 @@ body {
 
     .container {
         display: grid;
-        grid-template-columns: 20vw 60vw 20vw;
+        grid-template-columns: 17vw 66vw 17vw;
         grid-template-rows: auto 1fr auto;
         grid-column-gap: 10px;
         grid-row-gap: 15px;
@@ -186,6 +191,10 @@ body {
 
                 li {
                     margin: 0 1rem;
+
+                    a {
+                        background-image: none;;
+                    }
                 }
             }
         }
@@ -214,6 +223,7 @@ body {
     &.dark {
         background-color: @dark;
         color: @light;
+        transition: color 0.3s ease-out, background-color 0.3s ease-out;
 
         h2, h3, h4, h5, h6 {
             color: lighten(@base, 45%);

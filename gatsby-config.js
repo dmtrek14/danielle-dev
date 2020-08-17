@@ -16,8 +16,8 @@ module.exports = {
         name: "Danielle Mayabb - Developer",
         short_name: "Danielle Mayabb - Developer",
         start_url: "/",
-        background_color: "#f0f0f0",
-        theme_color: "#30415b",
+        background_color: "#fffae6",
+        theme_color: "#353430",
         display: "standalone",
        // icon: "src/images/icon.png",
         //crossOrigin: `anonymous`

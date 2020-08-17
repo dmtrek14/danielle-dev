@@ -6,12 +6,12 @@
 }
 body {
   font-family: 'Open Sans', sans-serif;
-  font-display: swap;
   font-size: 1rem;
   margin: 0;
   height: 100vh;
   background-color: #fffae6;
   color: #353430;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
 }
 body h1,
 body h2,
@@ -31,11 +31,15 @@ body h6 {
 body a {
   color: #353430;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
 }
 body a:focus,
 body a:hover {
   outline: 2px dashed #353430;
+}
+body p {
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 body .sr-only {
   position: absolute;
@@ -143,7 +147,7 @@ body header nav .site-links .light-toggle {
 }
 body .container {
   display: grid;
-  grid-template-columns: 20vw 60vw 20vw;
+  grid-template-columns: 17vw 66vw 17vw;
   grid-template-rows: auto 1fr auto;
   grid-column-gap: 10px;
   grid-row-gap: 15px;
@@ -173,6 +177,9 @@ body .container main .social {
 body .container main .social li {
   margin: 0 1rem;
 }
+body .container main .social li a {
+  background-image: none;
+}
 body footer {
   padding: 0.5rem 1rem;
   display: grid;
@@ -193,6 +200,7 @@ body footer a:hover {
 body.dark {
   background-color: #353430;
   color: #fffae6;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
 }
 body.dark h2,
 body.dark h3,
