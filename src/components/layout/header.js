@@ -22,7 +22,7 @@ const Header = () => {
 return (
     <header>
     <nav>
-        <a href="#main-content" class="skip">Skip to main content</a>
+        <a href="#main-content" class="skip">Skip to main</a>
         <div>
           <img class="nav-photo" src={`profile-photo.jpg`} alt="headshot of Danielle"/>
         </div>
@@ -34,6 +34,7 @@ return (
         </div>
         <div className="site-links">
             <Link to="/Work">Work</Link>
+            <Link to="/Experience">Experience</Link>
             <Link to="/About">About</Link>
             <span>
                 <button onClick={ThemeToggle} className={theme === 'dark' ? "toggle dark-toggle" : "toggle light-toggle"} >                  
