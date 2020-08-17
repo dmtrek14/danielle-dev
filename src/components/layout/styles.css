@@ -9,6 +9,7 @@ body {
   font-display: swap;
   font-size: 1rem;
   margin: 0;
+  height: 100vh;
   background-color: #fffae6;
   color: #353430;
 }
@@ -55,6 +56,7 @@ body header {
 }
 body header nav {
   display: grid;
+  grid-template-columns: 7vw 30vw auto;
   grid-auto-flow: column;
   grid-gap: 0.5rem;
   padding: 0.5rem 1.2rem;
@@ -68,6 +70,15 @@ body header nav .skip:focus {
   padding: 0.8rem 0.5rem;
   transform: translateY(0%);
   left: 20%;
+}
+body header nav .nav-photo {
+  border-radius: 50%;
+  width: 60px;
+}
+@media (max-width: 768px) {
+  body header nav .nav-photo {
+    display: none;
+  }
 }
 body header nav .site-name {
   display: grid;
@@ -94,6 +105,7 @@ body header nav .site-name-short a {
 @media (max-width: 768px) {
   body header nav .site-name-short {
     display: grid;
+    grid-column-start: 1;
     font-size: 1.4rem;
     font-family: 'Open Sans Condensed', sans-serif;
   }
@@ -117,10 +129,12 @@ body header nav .site-links .toggle {
 body header nav .site-links .dark-toggle {
   background-color: #d1872c !important;
   border: 2px solid black;
+  box-shadow: 0px 0px 0px 1px #d1872c;
 }
 body header nav .site-links .light-toggle {
   background-color: black !important;
-  border: 3px solid #d1872c;
+  border: 2px solid #d1872c;
+  box-shadow: 0px 0px 0px 1px black;
 }
 body .container {
   display: grid;
@@ -136,7 +150,7 @@ body .container {
   }
 }
 body .container main {
-  min-height: 75vh;
+  min-height: 85vh;
   grid-column-start: 2;
 }
 @media (max-width: 768px) {

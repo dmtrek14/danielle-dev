@@ -23,6 +23,9 @@ return (
     <header>
     <nav>
         <a href="#main-content" class="skip">Skip to main content</a>
+        <div>
+          <img class="nav-photo" src={`profile-photo.jpg`} alt="headshot of Danielle"/>
+        </div>
         <div className="site-name">
             <Link to="/">Danielle Mayabb</Link>
         </div>
