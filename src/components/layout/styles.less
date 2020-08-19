@@ -5,6 +5,7 @@
 @ops: #d1872c; 
 @base: #4f5261;
 
+@screen-xsmall: 480px;
 @screen-small: 768px;
 
 * {
@@ -65,9 +66,13 @@ body {
         border-bottom: 0.3rem solid black;
         border-image: repeating-linear-gradient( 90deg, @command, @command 34%, @science 34%, @science 67%, @ops 67%, @ops 100%) 20;
 
+        @media (max-width: @screen-xsmall){
+            padding-top: 0.5rem;
+        }
+
         nav  {
             display: grid;
-            grid-template-columns: 7vw 28vw auto;
+            grid-template-columns: 1fr 3fr 5fr;
             grid-auto-flow: column;
             grid-gap: 0.5rem;
             padding: 0.5rem 1.2rem;
@@ -76,14 +81,24 @@ body {
                 position: absolute;
                 transform: translateY(-140%);
                 transition: transform 0.3s ease-in-out;
-            }
-            .skip:focus {
-                padding: 0.8rem .5rem;
-                transform: translateY(0%);
-                left: 12%;
 
-                @media (min-width: @screen-small){
-                    left: 40%;
+                &:focus {
+                    padding: 0.8rem .5rem;
+                    transform: translateY(0%);
+                    left: 12%; 
+    
+                    @media (max-width: @screen-xsmall){
+                        padding: 0;
+                        transform: translateY(-45%);
+                        left: 35%;
+                    }
+                    @media (min-width: @screen-xsmall) and (max-width: @screen-small){
+                        transform: translateY(-15%);
+                    }
+                    @media (min-width: @screen-small){
+                        left: 40%;
+                    }
+                    
                 }
             }
 
@@ -163,24 +178,18 @@ body {
 
     .container {
         display: grid;
-        grid-template-columns: 17vw 66vw 17vw;
+        grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: auto 1fr auto;
-        grid-column-gap: 10px;
-        grid-row-gap: 15px;
-
-        @media (max-width: @screen-small){
-            grid-template-columns: 95vw;
-            max-width: 95vw;
-        }
+        grid-column-gap: 0.7rem;
+        // grid-row-gap: 0.7rem;
 
         main {
             min-height:85vh;
             grid-column-start: 2;
 
             @media (max-width: @screen-small){
-                grid-column-start: 1;
-                padding: 1rem;
-                
+                grid-column: 1 / span3;
+                padding: 1rem;              
             }
 
             .social {
