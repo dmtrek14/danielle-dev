@@ -210,6 +210,17 @@ body {
                 padding: 1rem;              
             }
 
+            .project-list {
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                grid-column-gap: 0.7rem;
+                grid-row-gap: 0.7rem;
+
+                @media (max-width: @screen-small){
+                    grid-template-columns: unset;   
+                }
+            }
         }
     }
 
