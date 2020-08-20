@@ -1,7 +1,9 @@
 import React, { useState, useEffect }  from "react"
 import { Link } from 'gatsby'
+import Img from "gatsby-image"
 
-const Header = () => {
+
+const Header = ({ profileImage }) => {
     let websiteTheme
     if (typeof window !== `undefined`) {
       websiteTheme = window.__theme
@@ -22,9 +24,9 @@ const Header = () => {
 return (
     <header>
     <nav>
-        <a href="#main-content" class="skip">Skip to main</a>
+        <a href="#main-content" className="skip">Skip to main</a>
         <div>
-          <img class="nav-photo" src={`profile-photo.jpg`} alt="headshot of Danielle"/>
+        <Img className="nav-photo" fixed={profileImage} alt="headshot of Danielle" style={{display: 'inherit'}} fadeIn={true}/>
         </div>
         <div className="site-name">
             <Link to="/">Danielle Mayabb</Link>

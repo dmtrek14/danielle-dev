@@ -86,7 +86,7 @@ body header nav {
 }
 body header nav .skip {
   position: absolute;
-  transform: translateY(-140%);
+  transform: translateY(-170%);
   transition: transform 0.3s ease-in-out;
 }
 body header nav .skip:focus {
@@ -113,7 +113,6 @@ body header nav .skip:focus {
 }
 body header nav .nav-photo {
   border-radius: 50%;
-  width: 60px;
 }
 @media (max-width: 768px) {
   body header nav .nav-photo {

@@ -16,8 +16,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({graphql, actions})=> { 
     const { createPage } = actions;
-    const experienceTemplate = path.resolve("src/templates/experience.js");
-    const projectTemplate = path.resolve("src/templates/project.js");
+    const experienceAndProjectTemplate = path.resolve("src/templates/experienceAndProject.js");
 
     const result = await graphql(`
     query {
@@ -60,7 +59,7 @@ exports.createPages = async ({graphql, actions})=> {
   languages.forEach(({node}) => {
     createPage({
       path: `/Experience/languages-and-libraries${node.fields.slug}`,
-      component: experienceTemplate,
+      component: experienceAndProjectTemplate,
       context: {
         slug: node.fields.slug,
         id: node.id
@@ -71,7 +70,7 @@ exports.createPages = async ({graphql, actions})=> {
   projects.forEach(({node}) => {
     createPage({
       path: `/Work/projects${node.fields.slug}`,
-      component: experienceTemplate,
+      component: experienceAndProjectTemplate,
       context: {
         slug: node.fields.slug,
         id: node.id

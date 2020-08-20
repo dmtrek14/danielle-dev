@@ -10,6 +10,8 @@ module.exports = {
     },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -23,6 +25,13 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/experience-and-projects/projects/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     {
