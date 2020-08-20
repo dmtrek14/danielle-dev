@@ -10,6 +10,21 @@ module.exports = {
     },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `languages`,
+        path: `${__dirname}/experience-and-projects/languages-and-libraries/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/experience-and-projects/projects/`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -23,7 +38,6 @@ module.exports = {
         icon_options: {
           purpose: `maskable`
         }
-        //crossOrigin: `anonymous`
       }
     },
     'gatsby-plugin-offline'

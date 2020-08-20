@@ -54,6 +54,20 @@ body .sr-only {
 body .mt-2 {
   margin-top: 0.5rem;
 }
+body .social {
+  list-style-type: none;
+  font-size: 1.6rem;
+  display: inline-flex;
+  padding-left: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+body .social li {
+  margin: 0 1rem;
+}
+body .social li a {
+  background-image: none;
+}
 body header {
   border-bottom: 0.3rem solid black;
   border-image: repeating-linear-gradient(90deg, #880831, #880831 34%, #2e4e68 34%, #2e4e68 67%, #d1872c 67%, #d1872c 100%) 20;
@@ -111,7 +125,7 @@ body header nav .site-name {
   justify-content: start;
   align-content: center;
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 body header nav .site-name a {
@@ -164,31 +178,20 @@ body header nav .site-links .light-toggle {
 }
 body .container {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: auto 1fr auto;
   grid-column-gap: 0.7rem;
 }
 body .container main {
   min-height: 85vh;
   grid-column-start: 2;
+  padding-bottom: 2rem;
 }
 @media (max-width: 768px) {
   body .container main {
     grid-column: 1 / span3;
     padding: 1rem;
   }
-}
-body .container main .social {
-  list-style-type: none;
-  font-size: 1.6rem;
-  display: flex;
-  padding-left: 0;
-}
-body .container main .social li {
-  margin: 0 1rem;
-}
-body .container main .social li a {
-  background-image: none;
 }
 body footer {
   padding: 0.5rem 1rem;
@@ -206,6 +209,10 @@ body footer a {
 body footer a:focus,
 body footer a:hover {
   outline: 2px dashed #fffae6;
+}
+body footer .svg-inline--fa {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 body.dark {
   background-color: #353430;

@@ -62,6 +62,23 @@ body {
         margin-top: 0.5rem;
     }
 
+    .social {
+        list-style-type: none;
+        font-size: 1.6rem;
+        display: inline-flex;
+        padding-left: 0;
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+
+        li {
+            margin: 0 1rem;
+
+            a {
+                background-image: none;;
+            }
+        }
+    }
+
     header {
         border-bottom: 0.3rem solid black;
         border-image: repeating-linear-gradient( 90deg, @command, @command 34%, @science 34%, @science 67%, @ops 67%, @ops 100%) 20;
@@ -116,7 +133,7 @@ body {
                 justify-content: start;
                 align-content: center;
                 font-family: 'Open Sans Condensed', sans-serif;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 font-weight: bold;
 
                 & a {
@@ -178,7 +195,7 @@ body {
 
     .container {
         display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 4fr 1fr;
         grid-template-rows: auto 1fr auto;
         grid-column-gap: 0.7rem;
         // grid-row-gap: 0.7rem;
@@ -186,26 +203,13 @@ body {
         main {
             min-height:85vh;
             grid-column-start: 2;
+            padding-bottom: 2rem;
 
             @media (max-width: @screen-small){
                 grid-column: 1 / span3;
                 padding: 1rem;              
             }
 
-            .social {
-                list-style-type: none;
-                font-size: 1.6rem;
-                display: flex;
-                padding-left: 0;
-
-                li {
-                    margin: 0 1rem;
-
-                    a {
-                        background-image: none;;
-                    }
-                }
-            }
         }
     }
 
@@ -225,6 +229,10 @@ body {
             &:focus, &:hover {
                 outline: 2px dashed @light;
             }
+        }
+        .svg-inline--fa {
+            margin-left: 0.3rem;
+            margin-right: 0.3rem;
         }
     }
     
