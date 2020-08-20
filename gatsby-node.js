@@ -19,41 +19,38 @@ exports.createPages = async ({graphql, actions})=> {
     const experienceTemplate = path.resolve("src/templates/experience.js");
     //const projectTemplate = path.resolve("");
     const result = await graphql(`
-   query {
-    languages: allMdx {
-      edges {
-        node {
-          frontmatter {
-            title
+    query {
+      languages: allMdx {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+            body
+            excerpt(pruneLength: 100)
           }
         }
       }
-    }
-    projects: allMdx {
-        edges {
-            node {
-                frontmatter {
-                    title
-                }
-            }
-        }
-    }
-   }
-   
+    }  
   `)
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
-
+  
   var languages = result.data.languages.edges;
 
-  languages.foreach(({node}) => {
+  languages.forEach(({node}) => {
     createPage({
-      path: node.fields.slug,
+      path: `/Experience/languages-and-libraries${node.fields.slug}`,
       component: experienceTemplate,
       context: {
-        slug: node.fields.slug
+        slug: node.fields.slug,
+        id: node.id
       },
     })
   })
