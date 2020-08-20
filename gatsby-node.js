@@ -17,10 +17,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({graphql, actions})=> { 
     const { createPage } = actions;
     const experienceTemplate = path.resolve("src/templates/experience.js");
-    //const projectTemplate = path.resolve("");
+    const projectTemplate = path.resolve("src/templates/project.js");
+
     const result = await graphql(`
     query {
-      languages: allMdx {
+      languages: allMdx (filter: {fileAbsolutePath: {regex: "//languages-and-libraries//"}})  {
         edges {
           node {
             id
@@ -30,8 +31,19 @@ exports.createPages = async ({graphql, actions})=> {
             frontmatter {
               title
             }
-            body
-            excerpt(pruneLength: 100)
+          }
+        }
+      }
+      projects: allMdx (filter: {fileAbsolutePath: {regex: "//projects//"}})  {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
           }
         }
       }
@@ -43,6 +55,7 @@ exports.createPages = async ({graphql, actions})=> {
   }
   
   var languages = result.data.languages.edges;
+  var projects = result.data.projects.edges;
 
   languages.forEach(({node}) => {
     createPage({
@@ -54,4 +67,16 @@ exports.createPages = async ({graphql, actions})=> {
       },
     })
   })
+
+  projects.forEach(({node}) => {
+    createPage({
+      path: `/Work/projects${node.fields.slug}`,
+      component: experienceTemplate,
+      context: {
+        slug: node.fields.slug,
+        id: node.id
+      },
+    })
+  })
+
 }

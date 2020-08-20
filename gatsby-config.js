@@ -15,16 +15,16 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `languages`,
-        path: `${__dirname}/languages-and-libraries/`,
+        path: `${__dirname}/experience-and-projects/languages-and-libraries/`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `projects`,
-    //     path: `${__dirname}/src/pages/Work/projects/`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/experience-and-projects/projects/`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
