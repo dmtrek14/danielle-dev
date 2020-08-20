@@ -1,25 +1,29 @@
 import React from 'react'
-//import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Header from './header'
 import Footer from "./footer"
 import './styles.css'
 
+
 const Layout = ({ children}) => {
-//     const data = useStaticQuery(graphql`
-//     query SiteTitleQuery {
-//       site {
-//         siteMetadata {
-//           title
-//         }
-//       }
-//     }
-//   `)
+     const pageQuery = useStaticQuery(graphql`
+     {
+        headerImage: file(relativePath: {eq: "profile-photo.jpg"}) {
+            childImageSharp {
+                fixed(width: 60) {
+                    ...GatsbyImageSharpFixed
+                }
+            }
+        }
+    }
+    `
+    )
     
     return (
         <>
-            <Header/>
+            <Header profileImage={pageQuery.headerImage.childImageSharp.fixed}/>
             <div className="container">
-                <main id="main-content" tabindex="-1">
+                <main id="main-content" tabIndex="-1">
                     {children}
                 </main>
             </div>    

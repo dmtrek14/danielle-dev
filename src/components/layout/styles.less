@@ -5,6 +5,7 @@
 @ops: #d1872c; 
 @base: #4f5261;
 
+@screen-xsmall: 480px;
 @screen-small: 768px;
 
 * {
@@ -16,12 +17,12 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-display: swap;
     font-size: 1rem;
     margin: 0;
     height: 100vh;
     background-color: @light;
     color: @dark;
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
 
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Open Sans Condensed', sans-serif;
@@ -34,13 +35,18 @@ body {
     a {
         color: @dark;
         font-weight:bold;
-        text-decoration: underline;
+        text-decoration: none;
         
         &:focus, &:hover {
             outline: 2px dashed @dark;
         }
     }
     
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
     .sr-only {
         position: absolute;
         width: 1px;
@@ -56,35 +62,66 @@ body {
         margin-top: 0.5rem;
     }
 
+    .social {
+        list-style-type: none;
+        font-size: 1.6rem;
+        display: inline-flex;
+        padding-left: 0;
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+
+        li {
+            margin: 0 1rem;
+
+            a {
+                background-image: none;;
+            }
+        }
+    }
+
     header {
         border-bottom: 0.3rem solid black;
         border-image: repeating-linear-gradient( 90deg, @command, @command 34%, @science 34%, @science 67%, @ops 67%, @ops 100%) 20;
 
+        @media (max-width: @screen-xsmall){
+            padding-top: 0.5rem;
+        }
+
         nav  {
             display: grid;
-            grid-template-columns: 7vw 28vw auto;
+            grid-template-columns: 1fr 5fr 5fr;
             grid-auto-flow: column;
             grid-gap: 0.5rem;
             padding: 0.5rem 1.2rem;
 
             .skip {
                 position: absolute;
-                transform: translateY(-140%);
+                transform: translateY(-170%);
                 transition: transform 0.3s ease-in-out;
-            }
-            .skip:focus {
-                padding: 0.8rem .5rem;
-                transform: translateY(0%);
-                left: 12%;
 
-                @media (min-width: @screen-small){
-                    left: 40%;
+                &:focus {
+                    padding: 0.8rem .5rem;
+                    transform: translateY(0%);
+                    left: 12%; 
+    
+                    @media (max-width: @screen-xsmall){
+                        padding: 0;
+                        transform: translateY(-45%);
+                        left: 35%;
+                    }
+                    @media (min-width: @screen-xsmall) and (max-width: @screen-small){
+                        transform: translateY(-15%);
+                    }
+                    @media (min-width: @screen-small){
+                        left: 40%;
+                    }
+                    
                 }
             }
 
             .nav-photo {
                 border-radius: 50%;
-                width: 60px;
+                // width: 60px;
 
                 @media (max-width: @screen-small) {
                     display: none;
@@ -96,7 +133,7 @@ body {
                 justify-content: start;
                 align-content: center;
                 font-family: 'Open Sans Condensed', sans-serif;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 font-weight: bold;
 
                 & a {
@@ -158,36 +195,21 @@ body {
 
     .container {
         display: grid;
-        grid-template-columns: 20vw 60vw 20vw;
+        grid-template-columns: 1fr 4fr 1fr;
         grid-template-rows: auto 1fr auto;
-        grid-column-gap: 10px;
-        grid-row-gap: 15px;
-
-        @media (max-width: @screen-small){
-            grid-template-columns: 95vw;
-            max-width: 95vw;
-        }
+        grid-column-gap: 0.7rem;
+        // grid-row-gap: 0.7rem;
 
         main {
             min-height:85vh;
             grid-column-start: 2;
+            padding-bottom: 2rem;
 
             @media (max-width: @screen-small){
-                grid-column-start: 1;
-                padding: 1rem;
-                
+                grid-column: 1 / span3;
+                padding: 1rem;              
             }
 
-            .social {
-                list-style-type: none;
-                font-size: 1.6rem;
-                display: flex;
-                padding-left: 0;
-
-                li {
-                    margin: 0 1rem;
-                }
-            }
         }
     }
 
@@ -208,12 +230,17 @@ body {
                 outline: 2px dashed @light;
             }
         }
+        .svg-inline--fa {
+            margin-left: 0.3rem;
+            margin-right: 0.3rem;
+        }
     }
     
 
     &.dark {
         background-color: @dark;
         color: @light;
+        transition: color 0.3s ease-out, background-color 0.3s ease-out;
 
         h2, h3, h4, h5, h6 {
             color: lighten(@base, 45%);

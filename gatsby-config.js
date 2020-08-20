@@ -10,17 +10,43 @@ module.exports = {
     },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `languages`,
+        path: `${__dirname}/experience-and-projects/languages-and-libraries/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/experience-and-projects/projects/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "Danielle Mayabb - Developer",
         short_name: "Danielle Mayabb - Developer",
         start_url: "/",
-        background_color: "#f0f0f0",
-        theme_color: "#30415b",
+        background_color: "#fffae6",
+        theme_color: "#353430",
         display: "standalone",
-       // icon: "src/images/icon.png",
-        //crossOrigin: `anonymous`
+        icon: "src/images/icon.png",
+        icon_options: {
+          purpose: `maskable`
+        }
       }
     },
     'gatsby-plugin-offline'
