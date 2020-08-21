@@ -198,7 +198,6 @@ body {
         grid-template-columns: 1fr 4fr 1fr;
         grid-template-rows: auto 1fr auto;
         grid-column-gap: 0.7rem;
-        // grid-row-gap: 0.7rem;
 
         main {
             min-height:85vh;
@@ -219,6 +218,19 @@ body {
 
                 @media (max-width: @screen-small){
                     grid-template-columns: unset;   
+                }
+            }
+
+            .card {
+                background-color: lighten(@light, 4%);
+
+                .card-img-top {
+                    width: 100%;
+                    flex-shrink: 0;
+                }
+
+                .card-body {
+                    padding: 0.7rem;
                 }
             }
         }
@@ -263,6 +275,10 @@ body {
             &:focus, &:hover {
                 outline: 2px dashed @light;
             }
+        }
+
+        .container  main .card {
+            background-color: lighten(@dark, 10%);
         }
     }
 }

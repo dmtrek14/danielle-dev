@@ -204,6 +204,16 @@ body .container main .project-list {
     grid-template-columns: unset;
   }
 }
+body .container main .card {
+  background-color: #fffefa;
+}
+body .container main .card .card-img-top {
+  width: 100%;
+  flex-shrink: 0;
+}
+body .container main .card .card-body {
+  padding: 0.7rem;
+}
 body footer {
   padding: 0.5rem 1rem;
   display: grid;
@@ -243,4 +253,7 @@ body.dark a {
 body.dark a:focus,
 body.dark a:hover {
   outline: 2px dashed #fffae6;
+}
+body.dark .container main .card {
+  background-color: #504e48;
 }

@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from 'gatsby';
 import Layout from "../components/layout"
 import SEO from "../components/layout/seo"
 import SocialIcons from "../components/socialIcons"
@@ -6,7 +7,7 @@ import ProjectList from "../components/projectList"
 
 export const query = graphql`
 query projectsQuery{
-  allMdx(filter: {fileAbsolutePath: {regex: "//projects//"}}) {
+  allMdx(filter: {fileAbsolutePath: {regex: "//projects//"}, frontmatter: {isCurrent: {eq: true}}}) {
     totalCount,
     edges {
       node {
@@ -15,6 +16,9 @@ query projectsQuery{
         }
         frontmatter {
           title
+          isCurrent
+          githubLink
+          featuredImage
         }
         excerpt(pruneLength: 200)
         id
@@ -25,7 +29,7 @@ query projectsQuery{
 `
 
 export default (props) => {
-  console.log(props)
+  
   return (
     <Layout>
       <SEO title="Home" description="Welcome to my home page" pathname={props.location.pathname}/>
