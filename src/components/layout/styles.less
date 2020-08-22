@@ -74,7 +74,12 @@ body {
             margin: 0 1rem;
 
             a {
-                background-image: none;;
+                background-image: none;
+
+                .svg-inline--fa {
+                    margin-left: 0.3rem;
+                    margin-right: 0.3rem;
+                }
             }
         }
     }
@@ -218,6 +223,18 @@ body {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: auto auto;
                 grid-column-gap: 2.5rem;
+                grid-row-gap: 2rem;
+
+                @media (max-width: @screen-small){
+                    grid-template-columns: unset;   
+                }
+            }
+
+            .experience-list {
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto auto;
+                grid-column-gap: 2rem;
                 grid-row-gap: 2rem;
 
                 @media (max-width: @screen-small){

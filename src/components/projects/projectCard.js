@@ -9,6 +9,8 @@ const ProjectCard = ({ node }) => {
     return "/Work/projects" + slug;
   };
 
+  const altText = "Screenshot of " + node.frontmatter.title + " project"
+
   const GithubLink = ({ github }) => {
     if(node.frontmatter.hasGithubLink){
         return (
@@ -25,15 +27,13 @@ const ProjectCard = ({ node }) => {
      }
   }
 
-  
-
   return (
     <>
       <div className="card">
         <div className="card-img-top">
           <Img
             fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
-            alt="screenshot of project"
+            alt={altText}
           />
         </div>
         <div className="card-body">

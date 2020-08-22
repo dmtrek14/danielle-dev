@@ -68,6 +68,10 @@ body .social li {
 body .social li a {
   background-image: none;
 }
+body .social li a .svg-inline--fa {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
 body header {
   border-bottom: 0.3rem solid black;
   border-image: repeating-linear-gradient(90deg, #880831, #880831 34%, #2e4e68 34%, #2e4e68 67%, #d1872c 67%, #d1872c 100%) 20;
@@ -204,6 +208,18 @@ body .container main .project-list {
 }
 @media (max-width: 768px) {
   body .container main .project-list {
+    grid-template-columns: unset;
+  }
+}
+body .container main .experience-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+@media (max-width: 768px) {
+  body .container main .experience-list {
     grid-template-columns: unset;
   }
 }

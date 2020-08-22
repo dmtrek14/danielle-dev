@@ -41,7 +41,7 @@ query projectQuery{
 export default (props) => {
   return (
     <Layout>
-      <SEO title="Work" description="Some of the work I've done" pathname={props.location.pathname}/>
+      <SEO title="Work" description="Some of the work I've done as a developer" pathname={props.location.pathname}/>
       <h1>Work</h1>
       <p>Work I've done.</p>
       <h2>Projects</h2>
