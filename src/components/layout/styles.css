@@ -192,12 +192,15 @@ body .container main {
     padding: 1rem;
   }
 }
+body .container main hr {
+  margin: 2rem 0 2rem 0;
+}
 body .container main .project-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  grid-column-gap: 0.7rem;
-  grid-row-gap: 0.7rem;
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 2rem;
 }
 @media (max-width: 768px) {
   body .container main .project-list {
@@ -213,6 +216,12 @@ body .container main .card .card-img-top {
 }
 body .container main .card .card-body {
   padding: 0.7rem;
+}
+body .container main .card .card-body .card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0 0.75rem 0;
+  border-top: 1px solid #353430;
 }
 body footer {
   padding: 0.5rem 1rem;
@@ -256,4 +265,7 @@ body.dark a:hover {
 }
 body.dark .container main .card {
   background-color: #504e48;
+}
+body.dark .container main .card .card-body .card-footer {
+  border-top: 1px solid #fffae6;
 }

@@ -209,12 +209,16 @@ body {
                 padding: 1rem;              
             }
 
+            hr {
+                margin: 2rem 0 2rem 0;
+            }
+
             .project-list {
                 display:grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: auto auto;
-                grid-column-gap: 0.7rem;
-                grid-row-gap: 0.7rem;
+                grid-column-gap: 2.5rem;
+                grid-row-gap: 2rem;
 
                 @media (max-width: @screen-small){
                     grid-template-columns: unset;   
@@ -231,6 +235,13 @@ body {
 
                 .card-body {
                     padding: 0.7rem;
+
+                    .card-footer {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0.75rem 0 0.75rem 0;
+                        border-top: 1px solid @dark;
+                    }
                 }
             }
         }
@@ -279,6 +290,10 @@ body {
 
         .container  main .card {
             background-color: lighten(@dark, 10%);
+
+           .card-body .card-footer {
+                border-top: 1px solid @light;
+            }
         }
     }
 }

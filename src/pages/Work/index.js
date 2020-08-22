@@ -2,11 +2,14 @@ import React from "react"
 import { graphql } from 'gatsby';
 import Layout from "../../components/layout"
 import SEO from "../../components/layout/seo"
-import ProjectList from "../../components/projectList"
+import ProjectList from "../../components/projects/projectList"
 
 export const query = graphql`
 query projectQuery{
-  allMdx(filter: {fileAbsolutePath: {regex: "//projects//"}}) {
+  allMdx(
+    filter: {fileAbsolutePath: {regex: "//projects//"}}, 
+    sort: {fields: frontmatter___projectStartDate, order: DESC}
+    ) {
     totalCount,
     edges {
       node {
@@ -16,8 +19,18 @@ query projectQuery{
         frontmatter {
           title
           isCurrent
+          githubLink
+          hasGithubLink
+          summaryText
+          projectStartDate(formatString: "YYYY MMMM D")
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 800, maxHeight: 245, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
-        excerpt(pruneLength: 200)
         id
       }
     }

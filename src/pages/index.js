@@ -3,11 +3,15 @@ import { graphql } from 'gatsby';
 import Layout from "../components/layout"
 import SEO from "../components/layout/seo"
 import SocialIcons from "../components/socialIcons"
-import ProjectList from "../components/projectList"
+import ProjectList from "../components/projects/projectList"
 
 export const query = graphql`
 query projectsQuery{
-  allMdx(filter: {fileAbsolutePath: {regex: "//projects//"}, frontmatter: {isCurrent: {eq: true}}}) {
+  allMdx(
+    filter: {fileAbsolutePath: {regex: "//projects//"}, frontmatter: {isCurrent: {eq: true}}}, 
+    limit: 4, 
+    sort: {fields: frontmatter___projectStartDate, order: DESC}
+    ) {
     totalCount,
     edges {
       node {
@@ -18,9 +22,17 @@ query projectsQuery{
           title
           isCurrent
           githubLink
-          featuredImage
+          hasGithubLink
+          summaryText
+          projectStartDate(formatString: "YYYY MMMM D")
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 800, maxHeight: 245, quality: 90)  {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
-        excerpt(pruneLength: 200)
         id
       }
     }
