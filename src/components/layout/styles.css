@@ -199,7 +199,7 @@ body .container main {
 body .container main hr {
   margin: 2rem 0 2rem 0;
 }
-body .container main .project-list {
+body .container main .two-col-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
@@ -207,11 +207,11 @@ body .container main .project-list {
   grid-row-gap: 2rem;
 }
 @media (max-width: 768px) {
-  body .container main .project-list {
+  body .container main .two-col-grid {
     grid-template-columns: unset;
   }
 }
-body .container main .experience-list {
+body .container main .three-col-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
@@ -219,8 +219,13 @@ body .container main .experience-list {
   grid-row-gap: 2rem;
 }
 @media (max-width: 768px) {
-  body .container main .experience-list {
+  body .container main .three-col-grid {
     grid-template-columns: unset;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .container main .three-col-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 body .container main .card {

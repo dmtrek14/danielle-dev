@@ -1,15 +1,14 @@
 import React from "react";
-import ExperienceCard from "./experienceCard"
-
+import ExperienceCard from "./experienceCard";
 
 const ExperienceList = ({ data }) => {
   if (!data) return null;
- 
+
   return (
     <>
-      <div className="experience-list">
+      <div id="experience-list" className="three-col-grid">
         {data.allMdx.edges.map(({ node }) => (
-          <ExperienceCard node={node} key={node.id}/>          
+          <ExperienceCard node={node} key={node.id} />
         ))}
       </div>
     </>

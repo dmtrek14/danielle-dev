@@ -7,6 +7,7 @@
 
 @screen-xsmall: 480px;
 @screen-small: 768px;
+@screen-medium: 1024px;
 
 * {
     text-rendering: optimizeLegibility;
@@ -218,7 +219,7 @@ body {
                 margin: 2rem 0 2rem 0;
             }
 
-            .project-list {
+            .two-col-grid {
                 display:grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: auto auto;
@@ -230,7 +231,7 @@ body {
                 }
             }
 
-            .experience-list {
+            .three-col-grid {
                 display:grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: auto auto;
@@ -239,6 +240,9 @@ body {
 
                 @media (max-width: @screen-small){
                     grid-template-columns: unset;   
+                }
+                @media (min-width: @screen-small) and (max-width: @screen-medium){
+                    grid-template-columns: 1fr 1fr;   
                 }
             }
 

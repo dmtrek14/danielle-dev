@@ -1,10 +1,9 @@
 import React from "react";
-import ProjectCard from "./projectCard"
-
+import ProjectCard from "./projectCard";
 
 const ProjectList = ({ data, isForHome }) => {
   if (!data) return null;
- 
+
   return (
     <>
       {isForHome === true && (
@@ -13,9 +12,9 @@ const ProjectList = ({ data, isForHome }) => {
           <h2>what I'm working on</h2>
         </>
       )}
-      <div className="project-list">
+      <div id="project-list" className="two-col-grid">
         {data.allMdx.edges.map(({ node }) => (
-          <ProjectCard node={node} key={node.id}/>          
+          <ProjectCard node={node} key={node.id} />
         ))}
       </div>
     </>
