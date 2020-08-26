@@ -85,6 +85,28 @@ body {
         }
     }
 
+    .home-icons {
+        padding: 1rem 0 0 0;
+
+        .social {
+            display:grid;
+            text-align: center;
+
+            li {
+                margin: 1rem;
+            }
+
+            @media (max-width: @screen-small){
+                display: inline-flex;    
+                margin: 0;       
+            }
+        }
+
+        @media (max-width: @screen-small){
+            padding: 0;    
+        }
+    }
+
     header {
         border-bottom: 0.3rem solid black;
         border-image: repeating-linear-gradient( 90deg, @command, @command 34%, @science 34%, @science 67%, @ops 67%, @ops 100%) 20;

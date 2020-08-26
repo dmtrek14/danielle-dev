@@ -14,17 +14,18 @@ export default props => {
       <p>
         I'm a lifelong animal-lover, nerd, and Reno resident. When I'm not
         developing, I am spending time with my wife and animals, reading,
-        writing, riding my bike, or snowboarding.
+        writing, riding my bike, or snowboarding. I am a coffee and whiskey
+        aficionado. I make tasty vegan baked goods.
       </p>
       <p>
         I have master's degrees in Information Science and Creative Writing, and
         my undergraduate degree is in English Literature. Aside from a few
         classes in grad school, I am largely self-taught as a developer or have
-        learned on the job.
+        learned on the job. I have an incurable case of imposter syndrome.
       </p>
       <p>
         I occasionally write about the intersection of information science and
-        science fiction/fantasy (and other assorted geekery) over at 
+        science fiction/fantasy (and other assorted geekery) over at {" "}
         <a href="https://scifibrarian.com">scifibrarian.com</a>
       </p>
     </Layout>

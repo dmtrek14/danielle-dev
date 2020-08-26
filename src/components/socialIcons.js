@@ -24,7 +24,7 @@ const SocialIcons = () => {
           <span className="sr-only">LinkedIn profile</span>
         </a>
       </li>
-      <li>
+      {/* <li>
         <a href="https://codepen.io/dmtrek14">
           <FontAwesomeIcon icon={faCodepen} />
           <span className="sr-only">Codepen profile</span>
@@ -35,7 +35,7 @@ const SocialIcons = () => {
           <FontAwesomeIcon icon={faDev} />
           <span className="sr-only">Dev profile</span>
         </a>
-      </li>
+      </li> */}
       <li>
         <Link to="/Contact">
           <FontAwesomeIcon icon={faEnvelope} />

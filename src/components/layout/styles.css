@@ -72,6 +72,27 @@ body .social li a .svg-inline--fa {
   margin-left: 0.3rem;
   margin-right: 0.3rem;
 }
+body .home-icons {
+  padding: 1rem 0 0 0;
+}
+body .home-icons .social {
+  display: grid;
+  text-align: center;
+}
+body .home-icons .social li {
+  margin: 1rem;
+}
+@media (max-width: 768px) {
+  body .home-icons .social {
+    display: inline-flex;
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  body .home-icons {
+    padding: 0;
+  }
+}
 body header {
   border-bottom: 0.3rem solid black;
   border-image: repeating-linear-gradient(90deg, #880831, #880831 34%, #2e4e68 34%, #2e4e68 67%, #d1872c 67%, #d1872c 100%) 20;

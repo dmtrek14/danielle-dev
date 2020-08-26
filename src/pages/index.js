@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/layout/seo";
-import SocialIcons from "../components/socialIcons";
 import ProjectList from "../components/projects/projectList";
 
 export const query = graphql`
@@ -54,7 +53,7 @@ export default props => {
       <div>
         <h1>Danielle Mayabb</h1>
         <h2>
-          full-stack developer | accessibility engineer | information architect
+          full-stack developer | accessibility engineer | information architect | generalist
         </h2>
         <p>
           Hello! I'm Danielle. I make things for the web (and beyond). I'm
@@ -62,12 +61,9 @@ export default props => {
           My combined background in the arts, information science, and
           engineering has helped me form an empathetic and user-focused approach
           to development. I currently work for state government using a varied
-          tech stack (mostly .NET, other bits-and-bobs), and I do hobby projects
+          tech stack (mostly .NET and SQL, plus other bits-and-bobs), and I do hobby projects
           mostly in the JAMstack.
         </p>
-        <hr />
-        <h2>find me online</h2>
-        <SocialIcons />
         <ProjectList data={props.data} isForHome={true} />
       </div>
     </Layout>

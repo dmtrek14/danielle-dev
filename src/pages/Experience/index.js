@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "../../components/layout";
 import SEO from "../../components/layout/seo";
 import ExperienceList from "../../components/experience/experienceList";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons"
 
 export const query = graphql`
   query experienceQuery {
@@ -47,14 +49,16 @@ export default props => {
       <h2>Summary</h2>
       <p>
         I have formally been a developer for 4.5 years, but have done some
-        amount of development for around 10 years. I have experience working with
-        .NET, C#, SQL, HTML, CSS, and JS (various libraries). I have worked on everything from
-        database design, stored procedures/views, replication, and ETL to APIs,
-        services, and MVC applications to accessibility evaluation and
-        remediation, as well as creating mock-ups, UI designs, site information
-        architecture, and a style guide.
+        amount of development for around 10 years. I have experience working
+        with .NET, C#, SQL, HTML, CSS, and JS (various libraries). I have worked
+        on everything from database design, stored procedures/views,
+        replication, and ETL to APIs, services, and MVC applications to
+        accessibility evaluation and remediation, as well as creating mock-ups,
+        UI designs, site information architecture, and a style guide.
       </p>
-      <div><a href="">View my resume</a></div>
+      <div>
+        <a href=""><FontAwesomeIcon icon={faFilePdf} /> View my resume</a>
+      </div>
       <hr />
       <h2>Languages, libraries, etc. I've worked with</h2>
       <ExperienceList data={props.data} />

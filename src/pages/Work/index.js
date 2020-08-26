@@ -55,7 +55,8 @@ export default props => {
         I've tried to provide code snippets, screenshots, and summaries where
         appropriate in the detail view for each project.
       </p>
-      <h2>Projects</h2>
+      <hr/>
+      <h2>Selected projects and code</h2>
       <ProjectList data={props.data} isForHome={false} />
     </Layout>
   );
