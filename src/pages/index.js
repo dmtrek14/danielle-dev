@@ -47,7 +47,7 @@ export default props => {
     <Layout>
       <SEO
         title="Home"
-        description="Welcome to my home page"
+        description="Landing page for my dev website."
         pathname={props.location.pathname}
       />
       <div>
