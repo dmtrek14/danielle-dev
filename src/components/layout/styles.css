@@ -68,6 +68,31 @@ body .social li {
 body .social li a {
   background-image: none;
 }
+body .social li a .svg-inline--fa {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+body .home-icons {
+  padding: 1rem 0 0 0;
+}
+body .home-icons .social {
+  display: grid;
+  text-align: center;
+}
+body .home-icons .social li {
+  margin: 1rem;
+}
+@media (max-width: 768px) {
+  body .home-icons .social {
+    display: inline-flex;
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  body .home-icons {
+    padding: 0;
+  }
+}
 body header {
   border-bottom: 0.3rem solid black;
   border-image: repeating-linear-gradient(90deg, #880831, #880831 34%, #2e4e68 34%, #2e4e68 67%, #d1872c 67%, #d1872c 100%) 20;
@@ -192,6 +217,54 @@ body .container main {
     padding: 1rem;
   }
 }
+body .container main hr {
+  margin: 2rem 0 2rem 0;
+}
+body .container main .two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 2rem;
+}
+@media (max-width: 768px) {
+  body .container main .two-col-grid {
+    grid-template-columns: unset;
+  }
+}
+body .container main .three-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+@media (max-width: 768px) {
+  body .container main .three-col-grid {
+    grid-template-columns: unset;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .container main .three-col-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+body .container main .card {
+  background-color: #fffefa;
+}
+body .container main .card .card-img-top {
+  width: 100%;
+  flex-shrink: 0;
+}
+body .container main .card .card-body {
+  padding: 0.7rem;
+}
+body .container main .card .card-body .card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0 0.75rem 0;
+  border-top: 1px solid #353430;
+}
 body footer {
   padding: 0.5rem 1rem;
   display: grid;
@@ -231,4 +304,10 @@ body.dark a {
 body.dark a:focus,
 body.dark a:hover {
   outline: 2px dashed #fffae6;
+}
+body.dark .container main .card {
+  background-color: #504e48;
+}
+body.dark .container main .card .card-body .card-footer {
+  border-top: 1px solid #fffae6;
 }
