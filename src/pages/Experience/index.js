@@ -18,7 +18,7 @@ export const query = graphql`
           }
           frontmatter {
             title
-            icon
+            yearsOfExp
           }
           id
         }

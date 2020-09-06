@@ -19,15 +19,20 @@ export default props => {
       </p>
       <p>
         Work: Visual Studio 2019, VSCode, SQL Server Management Studio, Azure
-        Data Studio, Git bash, GitKraken, Windows Terminal, BeyondCompare,
+        Data Studio, Git bash, GitKraken, Windows Terminal (which I use for Git bash, Powershell, and command prompt), BeyondCompare,
         Notion, Microsoft Teams, IIS, Powershell.
+      </p>
+      <p>
+        I prefer a dark theme on anything I can apply it to. My current fave is
+        the Atom One dark theme. I pair that with the Fira Code font, which has
+        some excellent ligatures for coding.
       </p>
       <hr />
       <h2>Hardware</h2>
       <h3>PCs</h3>
       <p>
-        Home: HP Omen 870-147c with an Intel i7-6700 processor with 4
-        cores, 32GB RAM, 256 GB SSD, and 1TB HDD. Three monitors.
+        Home: HP Omen 870-147c with an Intel i7-6700 processor with 4 cores,
+        32GB RAM, 256 GB SSD, and 1TB HDD. Three monitors.
       </p>
       <p>
         Work: Dell Precision 5820 Tower with an Intel Xeon processor with 4
@@ -35,8 +40,8 @@ export default props => {
         are 4k)
       </p>
       <h3>Keyboards</h3>
-      <p>Home: I use an ErgoDox keyboard with Cherry Blue switches.</p>
-      <p>Work: An X-bows Nature, also with Cherry Blue switches.</p>
+      <p>Home: I use an ErgoDox Glow (in black) keyboard with Cherry Blue switches.</p>
+      <p>Work: An X-bows, also with Cherry Blue switches.</p>
       <h3>Other peripherals</h3>
       <p>I have an Anker vertical mouse for both home and work.</p>
       <p>
