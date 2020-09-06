@@ -9,6 +9,7 @@ export const query = graphql`
   query experienceQuery {
     allMdx(
       filter: { fileAbsolutePath: { regex: "//languages-and-libraries//" } }
+      sort: { fields: frontmatter___yearsOfExp, order: DESC }
     ) {
       totalCount
       edges {
