@@ -42,27 +42,33 @@ export default props => {
         I've worked with these things. Listing a language on a resume is only
         the beginning of the story and often doesn't provide an accurate picture
         of how a developer has actually used that language in practice.
-        Likewise, using a progress bar or 1-10 rating for skills is equally
-        useless, which is why I've taken a more narrative approach here.
       </p>
       <hr />
       <h2>Summary</h2>
+      <h3>Full-stack developer: 4.5 years</h3>
       <p>
         I have formally been a developer for 4.5 years, but have done some
-        amount of development for around 10 years. So, I have done full-stack
-        development for 4.5 years and front-end development for 10 years. I have
-        experience working with .NET, C#, SQL, HTML, CSS, and JS (various
-        libraries). I have worked on everything from database design, stored
-        procedures/views, replication, and ETL to APIs, services, and MVC
-        applications to accessibility evaluation and remediation, as well as
-        creating mock-ups, UI designs, site information architecture, and a
-        style guide.
+        front-end development for around 10 years. I have experience working
+        with .NET, C#, SQL, HTML, CSS, and JS (various libraries). I have worked
+        on everything from database design, stored procedures/views,
+        replication, and ETL to APIs, services, and MVC applications to
+        accessibility evaluation and remediation, as well as creating mock-ups,
+        UI designs, site information architecture, and a style guide.
       </p>
-      <div>
+      <h3>Research librarian: 9 years</h3>
+      <p>
+        Wait, why is this here? My work as a librarian helped me learn how folks
+        look for and think about information and how it is organized. And while
+        we didn't use full-on SQL databases, we did design and build databases
+        using DBTextworks; this was my training ground for how to think about
+        data structure. I also helped maintain the front-end code for the entire
+        Division.
+      </p>
+      {/* <div>
         <a href="">
           <FontAwesomeIcon icon={faFilePdf} /> View my resume
         </a>
-      </div>
+      </div> */}
       <hr />
       <h2>Languages, libraries, etc. I've worked with</h2>
       <ExperienceList data={props.data} />
