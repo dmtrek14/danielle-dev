@@ -6,12 +6,33 @@ module.exports = {
       title: `Danielle Mayabb - Developer`,
       description: `Personal developer website of Danielle Mayabb`,
       author: `Danielle Mayabb`,
-      siteUrl: `https://daniellem.dev`
+      siteUrl: `https://danielle-m.dev`
     },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `languages`,
+        path: `${__dirname}/src/pages/experience-and-projects/languages-and-libraries/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/pages/experience-and-projects/projects/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
     `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-mdx`,
@@ -22,31 +43,10 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
-             //path: `${__dirname}/src/images`,
+              path: `${__dirname}/src/images`,
             },
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `languages`,
-        path: `${__dirname}/experience-and-projects/languages-and-libraries/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `projects`,
-        path: `${__dirname}/experience-and-projects/projects/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
       },
     },
     {
