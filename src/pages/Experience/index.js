@@ -21,7 +21,6 @@ export const query = graphql`
           frontmatter {
             title
             yearsOfExp
-            featuredImage
           }
           id
         }
