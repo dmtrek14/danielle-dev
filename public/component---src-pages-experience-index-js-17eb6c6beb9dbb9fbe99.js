@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{ePVW:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),l=t("I/Ru"),o=t("phMG");n.default=function(e){return c.a.createElement(l.a,null,c.a.createElement(o.a,{title:"Experience",description:"Descriptions of the work I do, as well as the languages and tech I've worked with",pathname:e.location.pathname}),c.a.createElement("h1",null,"Experience"),c.a.createElement("p",null,"What I can do."))}}}]);
+//# sourceMappingURL=component---src-pages-experience-index-js-17eb6c6beb9dbb9fbe99.js.map
