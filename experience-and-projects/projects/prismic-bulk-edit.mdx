@@ -1,12 +1,15 @@
 ---
-title: prismic-bulk-edit
+title: Bulk Edit of Prismic Data
 isCurrent: false
 githubLink: https://github.com/dmtrek14/PrismicBulkEditScript
 hasGithubLink: true
-featuredImage: ./nelis-theme.png
+featuredImage: ./prismic-bulk-edit.png
 projectStartDate: 2020-07-02
 summaryText: A simple node script to iterate through json files and make changes
 ---
 
 ## Primary technologies, frameworks, and patterns used
 Node.js, Prismic
+
+## About this project
+The code itself is fairly self-explanatory here. I added a uid field to our Prismic model for the Research Division's "content" type and planned to slugify the title to use as the uid. I exported the Prismc data (which comes back as a zipped file of individual json files for each item in your Prismic repo) and saved it locally. I then wrote this helped to iterate through all of the json files, add a uid (from slugifying the title) and saving. I was able, then, to add the uid field in Prismic and import the data to effect a bulk update.

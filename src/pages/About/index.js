@@ -28,6 +28,10 @@ export default props => {
         science fiction/fantasy (and other assorted geekery) over at {" "}
         <a href="https://scifibrarian.com">scifibrarian.com</a>
       </p>
+      <h2>Values</h2>
+      <p>Vegan (animals are not for our use). Love is love. Feminist (trans women are women). Black Lives Matter. Environmentally conscious. Wishes the world was more like Star Trek. Believes there's no such thing as a dumb question.</p>
+      <h2>My heroes</h2>
+      <p>Ellen Ripley. The whole Enterprise D crew. Captain Janeway. B'Elanna Torres. Seven of Nine. Dana Scully. Sarah Connor.</p>
     </Layout>
   );
 };

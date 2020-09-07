@@ -1,6 +1,5 @@
 import React from "react";
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faHtml5, faCss3, faJs } from "@fortawesome/free-brands-svg-icons";
+import "../../components/layout/experience.css"
 
 const ExperienceCard = ({ node }) => {
   const path = slug => {
@@ -9,16 +8,11 @@ const ExperienceCard = ({ node }) => {
 
   return (
     <>
-      <div className="card">
+      <div className="card experience-card">
         <div className="card-body">
-          <h3> {node.frontmatter.title}</h3>
-          {/* <p>{node.frontmatter.summaryText}</p> */}
-          <div className="card-footer">
-            <div></div>
-            <div>
-              <a href={path(node.fields.slug)}>More info <span className="sr-only"> about my experience  {node.frontmatter.title}</span></a>
-            </div>
-          </div>
+          <h3>{node.frontmatter.title}</h3>
+          <p>{node.frontmatter.yearsOfExp} years experience</p>
+          <a href={path(node.fields.slug)}>More info <span className="sr-only"> about my experience with {node.frontmatter.title}</span></a>
         </div>
       </div>
     </>

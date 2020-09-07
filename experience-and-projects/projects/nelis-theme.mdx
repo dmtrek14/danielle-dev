@@ -1,5 +1,5 @@
 ---
-title: nelis-theme
+title: NELIS Bootstrap theme
 isCurrent: true
 githubLink: https://github.com/dmtrek14/Nelis-theme
 hasGithubLink: true
@@ -7,6 +7,23 @@ featuredImage: ./nelis-theme.png
 projectStartDate: 2019-12-18
 summaryText: Complete re-design of the menuing and UI of our most critical application
 ---
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 ## Primary technologies, frameworks, and patterns used
+
 ASP.NET, C#, MVC, jQuery, Hammer.js, Bootstrap 4, FontAwesome
+
+<a href="https://github.com/dmtrek14/Nelis-theme"><FontAwesomeIcon icon={faGithub}/> View project code</a> (a note: what's contained in this repo is not the NELIS application, but the Bootstrap 4 theme I created for it, as well as a simplified HTML representation of the menuing)
+
+## About this project
+
+This is a solo project. I have formulated the goals and tasks for all of the work in this project. 
+
+We have been using jQuery Mobile for the mobile version of NELIS, which has resulted in having multiple versions of pages. This has added a lot of technical debt, as developers have to remember to change all the versions of a page. On top of that, jQuery Mobile is a very old technology and not one we are interested in supporting any longer. Additionally, not all of the features of NELIS--notably, the Personalized Legislative Tracking--are available on the current mobile version of the site. Because a large percentage of traffic to the NELIS site comes from mobile devices, we need to unify and modernize our front-end codebase.
+
+The current site uses Bootstrap version 3 and has grown a bit wild and a lot of the code is fighting the framework (and, honestly, improperly using it). I made the decision to rewrite most of the existing front-end to use Bootstrap 4 (and all of its great utility classes). I have also made an effort to make the touch interactions with the site better; to that end, I am using the Hammer.js library to allow users to swipe from the left of the screen to open the application menu or to tap outside of it to close it.
+
+One of the other main goals of this project is the revamp the navigation in NELIS. At the moment, NELIS has a single-layer navigation for the application, one link to our homepage in the header, and an assortment of links to other main pages of our site buried in small font in the footer. None of this is ideal.
+
+I have converted the single link in the header to the homepage to a mega menu and moved most of the links from the current footer into this new header. I have also put links in the footer that make more sense to be there, such as links to contact information, career opportunities, the gift shop, and accessibility information. I have also made the NELIS application menu have additional depth. Most of the application menu items are now dropdowns with several suboptions to allow faster and more intuitive navigation. For example, the current iteration of NELIS has a link in the application menu to Committees; a user has to go to the Committees page, then find the committee they are looking for, then click into the committee's detail view. In this new iteration, I have added a submenu to the Committees item in the application menu that has a list of all committees, so that a user may navigate to any committee from anywhere in the application. 
