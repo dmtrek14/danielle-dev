@@ -1,9 +1,10 @@
 import React from "react";
+import { graphql } from 'gatsby';
 import Layout from "../../components/layout";
 import SEO from "../../components/layout/seo";
 import ExperienceList from "../../components/experience/experienceList";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
 export const query = graphql`
   query experienceQuery {
