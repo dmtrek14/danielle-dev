@@ -19,7 +19,7 @@ export default defineConfig ({
   // //     }
   // //   }
   // // }, 
-  rollupOptions: {
-    plugins: [scss()]
-  }
+  // rollupOptions: {
+  //   plugins: [scss()]
+  // }
 });

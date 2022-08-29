@@ -9,9 +9,14 @@ import { Image } from '@astrojs/image/components';
       </a>
       <div>
         <div class="nav-photo">
-          <Image src={import('../../public/assets/profile-photo.jpg')} class="nav-photo" width={60} height={60} alt="headshot of danielle" style="display:inherit;"/>
+          <!-- <Image src={import('../../public/assets/profile-photo.jpg')} class="nav-photo" width={60} height={60} alt="headshot of danielle" style="display:inherit;"/> -->
+          <img src="/assets/profile-photo.jpg"
+          class="nav-photo"
+          width="60"
+          alt="headshot of Danielle"
+          style="display:inherit;"
+          />
         </div>
-        
       </div>
       <div class="site-name">
         <a href="/">Danielle Mayabb</a>

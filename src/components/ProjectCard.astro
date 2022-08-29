@@ -4,6 +4,7 @@ import { Picture } from '@astrojs/image/components';
 import '@styles/Card.scss'
 const { project } = Astro.props;
 const { featured_image, project_name, summary_text, github_link} = project.data;
+const trimmedUrl = featured_image.url.replace(/\?.*/, '');
 ---
 
 <div class="card">
@@ -11,7 +12,7 @@ const { featured_image, project_name, summary_text, github_link} = project.data;
         <div>
             {featured_image &&
                 <Picture 
-                src={featured_image.url} 
+                src={trimmedUrl} 
                 alt={featured_image.alt}        
                 aspectRatio="8:3" 
                 widths={[340, 463]} 
