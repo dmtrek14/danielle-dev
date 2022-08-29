@@ -1,6 +1,6 @@
 # Welcome to my personal website - danielle-m.dev
 
-I built this site in order to have a place to showcase my skills and projects. It uses Gatsby, MDX, CSS Grid, and Netlify. 
+I built this site in order to have a place to showcase my skills and projects. It uses Astro, CSS Grid, and Netlify. 
 
 While I have opened up this project to show the code, I'd appreciate it if you don't simply clone my page and use it as your own. Be nice.
 
