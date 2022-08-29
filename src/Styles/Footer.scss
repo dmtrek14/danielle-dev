@@ -1,0 +1,24 @@
+footer {
+    padding: 0.5rem 1rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-color: #4f5261;
+    color: #fffae6;
+
+    a {
+        text-decoration: none;
+        color: #fffae6;
+        background-image: linear-gradient(transparent 1.25rem, #fffae6 50%, #fffae6 100%);
+
+        &:focus, &:hover {
+            outline: 2px dashed #fffae6;
+        }
+    }
+
+    .svg-inline--fa {
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+      }
+  }
+ 

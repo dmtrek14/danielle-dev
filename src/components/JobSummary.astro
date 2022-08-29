@@ -1,0 +1,8 @@
+---
+import RichText from '@components/RichText.astro'
+import { getYearsBetweenDates } from '@utils/DateCalculator'
+const { job_title, about_job, start_date, end_date} = Astro.props.job;
+
+---
+<h3>{job_title}: {getYearsBetweenDates(start_date, end_date)} year(s)</h3>
+<RichText content={about_job} />

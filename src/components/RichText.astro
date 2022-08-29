@@ -1,0 +1,8 @@
+---
+
+import * as prismicH from '@prismicio/helpers'
+const content = Astro.props.content
+const html = prismicH.asHTML(content)
+---
+<Fragment set:html={html}  />
+

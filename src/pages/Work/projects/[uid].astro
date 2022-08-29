@@ -1,0 +1,33 @@
+---
+import { getAllProjects } from '../../../prismic.js'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import RichText from '@components/RichText.astro'
+
+export async function getStaticPaths() {
+    let {results} = await getAllProjects();
+    
+    return results.map((item) => { 
+        return { params: { uid: item.uid}, props: { item}}
+    })
+}
+
+const {project_name, summary_text, tech_used, github_link, about_project, production_link} = Astro.props.item.data;
+---
+
+<BaseLayout title={project_name} description={summary_text.text} permalink={new URL(Astro.site).toString()}>
+    <h1>{project_name}</h1>
+    <h2>Primary technologies, frameworks, and patterns used</h2>
+    <RichText content={tech_used} />
+    <div>
+        {github_link &&
+            <a href={github_link.url}><i class="fab fa-github"></i> View project code</a>
+        } 
+    </div>
+    <div class="mt-2">
+        {production_link &&
+            <a href={production_link.url}><i class="fas fa-laptop-code"></i> View deployed code</a>
+        }
+    </div>
+    <h2>About the Project</h2>
+    <RichText content={about_project} />
+</BaseLayout>

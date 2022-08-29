@@ -1,0 +1,11 @@
+---
+import RichText from '@components/RichText.astro'
+const {items} = Astro.props
+
+---
+{items && 
+    items.map((item: { subsection_title: any; subsection_text: any; }) => (
+        <RichText content={item.subsection_title} />
+        <RichText content={item.subsection_text} />
+    ))
+}

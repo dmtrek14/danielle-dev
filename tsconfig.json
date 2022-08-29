@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    // Preact specific settings
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    // Enable top-level await, and other modern ESM features.
+    "target": "ESNext",
+    "module": "ESNext",
+    // Enable node-style module resolution, for things like npm package imports.
+    "moduleResolution": "node",
+    // Enable JSON imports.
+    "resolveJsonModule": true,
+    // Enable stricter transpilation for better output.
+    "isolatedModules": true,
+    // Add type definitions for our Vite runtime.
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"],
+      "@styles/*": ["src/Styles/*"],
+      "@layouts/*": ["src/layouts/*"],
+    },
+    "types": ["astro/client", "@astrojs/image/client"]
+  }
+}

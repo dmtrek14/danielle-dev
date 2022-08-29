@@ -1,0 +1,27 @@
+---
+import { getHome, getCurrentProjects } from '../prismic.js'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import RichText from '@components/RichText.astro'
+import ProjectCard from '@components/ProjectCard.astro'
+
+const {results } =  await getHome()
+const projects = await getCurrentProjects()
+const {page_title, page_subheader, intro_text} = results[0].data
+const projectList = projects.results
+---
+<BaseLayout title="Home" description="Landing page for my dev website." permalink={new URL(Astro.site).toString()}>
+    <div>
+        <RichText content={page_title}/>
+        <RichText content={page_subheader}/>
+        <RichText content={intro_text}/>
+        <hr />
+        <h2>what I'm working on</h2>
+        <div id="project-list" class="two-col-grid">
+        {projectList && 
+            projectList.map(project =>(
+                <ProjectCard project={project} />
+            ))
+        }
+        </div>
+    </div>
+</BaseLayout>

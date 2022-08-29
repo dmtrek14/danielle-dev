@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{"8xhQ":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),o=t.n(a),r=t("I/Ru"),l=t("phMG");n.default=function(e){return o.a.createElement(r.a,null,o.a.createElement(l.a,{title:"Work",description:"Some of the work I've done",pathname:e.location.pathname}),o.a.createElement("h1",null,"Work"),o.a.createElement("p",null,"Work I've done."))}}}]);
-//# sourceMappingURL=component---src-pages-work-index-js-5923c80bfa4c5205020d.js.map

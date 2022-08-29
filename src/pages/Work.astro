@@ -1,0 +1,28 @@
+---
+import { getAllProjects } from '../prismic.js'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import ProjectCard from '@components/ProjectCard.astro'
+
+const projects = await getAllProjects()
+const projectList = projects.results
+---
+    <BaseLayout title="Work" description="A little more about me" permalink={new URL("/Work", Astro.site).toString()}>
+        <h1>Work</h1>
+      <p>
+        I've worked on several projects on which I'm the sole developer, but
+        I've also contributed to many team projects. I've listed here a
+        combination of hobby projects and those I've done in the course of my
+        work. Much of the work I've done for my employer is proprietary, but
+        I've tried to provide code snippets, screenshots, and summaries where
+        appropriate in the detail view for each project.
+      </p>
+      <hr/>
+      <h2>Selected projects and code</h2>
+      <div id="project-list" class="two-col-grid">
+        {projectList && 
+            projectList.map(project =>(
+                <ProjectCard project={project} />
+            ))
+        }
+        </div>
+    </BaseLayout>

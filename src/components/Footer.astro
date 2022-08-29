@@ -1,0 +1,25 @@
+---
+import SocialIcons from '@components/SocialIcons.astro'
+import '@styles/Footer.scss';
+const copywriteYear = new Date().getFullYear()
+
+---
+
+<footer>
+    <div>
+      <SocialIcons />
+    </div>
+    <div class="mt-2">
+      Built with &nbsp;
+      <a href="/Uses">
+        <i class="fas fa-code"></i>
+        <span class="sr-only">code</span> +
+        <i class="fas fa-coffee"></i>
+        <span class="sr-only">coffee</span> +
+        <i class="fas fa-heart"></i>
+        <span class="sr-only">love</span>
+      </a>
+      &nbsp; in Reno, NV
+    </div>
+    <div class="mt-2">© {copywriteYear} Danielle Mayabb</div>
+  </footer>
