@@ -11,7 +11,8 @@
   "devDependencies": {
     "@astrojs/netlify": "^1.0.1",
     "@astrojs/preact": "^1.0.2",
-    "astro": "^1.0.7"
+    "astro": "^1.0.7",
+    "sass": "^1.54.5"
   },
   "dependencies": {
     "@astrojs/image": "^0.3.6",
@@ -23,7 +24,7 @@
     "@prismicio/client": "^6.6.4",
     "@prismicio/helpers": "^2.3.3",
     "dotenv": "^16.0.1",
-    "preact": "^10.10.6",
-    "sass": "^1.54.5"
+    "preact": "^10.10.6"
+   
   }
 }
