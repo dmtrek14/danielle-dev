@@ -1,0 +1,13 @@
+---
+import { getAbout } from '../prismic.js'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import RichText from '../components/RichText.astro'
+
+const {results } =  await getAbout()
+const pageData = results[0].data
+const title = pageData.page_title[0].text
+---
+    <BaseLayout title={title} description="A little more about me" permalink={new URL("/About", Astro.site).toString()}>
+        <RichText content={pageData.page_title}/>
+        <RichText content={pageData.page_content}/>
+    </BaseLayout>

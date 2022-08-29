@@ -1,0 +1,15 @@
+---
+import '@styles/Card.scss'
+import '@styles/ExperienceCard.scss'
+import { getYearsBetweenDates } from '@utils/DateCalculator'
+const { exp } = Astro.props;
+const { title, started_using } = exp.data
+---
+
+<div class="card experience-card">
+    <div class="card-body">
+        <h3>{title}</h3>
+        <p>{getYearsBetweenDates(started_using, null)} years experience</p>
+        <a href={"/Experience/languages-and-libraries/"+ exp.uid + "/"}>More info <span class="sr-only">about my experiences with </span></a>
+    </div>
+</div>

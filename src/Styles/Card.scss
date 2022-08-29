@@ -1,0 +1,17 @@
+ .card {
+    & .card-img-top {
+        width: 100%;
+        flex-shrink: 0;
+    }
+    & .card-body {
+        padding: 0.7rem;
+        // overflow-wrap: break-word;
+
+        & .card-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0 0.75rem 0;
+            
+        }
+    }
+  }

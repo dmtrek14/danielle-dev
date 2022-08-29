@@ -1,0 +1,20 @@
+---
+import { getUses } from '../prismic.js'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import RichText from '../components/RichText.astro'
+import Subsections from '@components/Subsections.astro'
+
+const {results } =  await getUses()
+const { page_title, page_summary, body } = results[0].data
+---
+    <BaseLayout title={page_title.text} description={page_summary.text} permalink={new URL("/Uses", Astro.site).toString()}>
+        <RichText content={page_title}/>
+        <RichText content={page_summary}/>
+        {body && 
+            body.map((slice: { primary: { section_title: any; section_text: any; }; items: any; }) => (
+              <RichText content={slice.primary.section_title} />
+              <RichText content={slice.primary.section_text} />
+              <Subsections items={slice.items} />
+            ))
+          }
+    </BaseLayout>

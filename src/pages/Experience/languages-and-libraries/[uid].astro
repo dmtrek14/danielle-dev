@@ -1,0 +1,31 @@
+---
+import { getWorkExperience } from '../../../prismic.js'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import RichText from '@components/RichText.astro'
+import Subsections from '@components/Subsections.astro'
+
+export async function getStaticPaths() {
+    let {results} = await getWorkExperience();
+    
+    return results.map((item) => { 
+        return { params: { uid: item.uid}, props: { item}}
+    })
+}
+
+const { title, usage_frequency, skills_narrative, body} = Astro.props.item.data
+---
+
+<BaseLayout title={title} description="" permalink={new URL(Astro.site).toString()}>
+    <h1>{title}</h1>
+    <h2>How often I use</h2>
+    <RichText content={usage_frequency} />
+    <h2>My skills with {title}</h2>
+    <RichText content={skills_narrative} />
+    {body && 
+      body.map((slice: { primary: { section_title: any; general_summary: any; }; items: any; }) => (
+        <RichText content={slice.primary.section_title} />
+        <RichText content={slice.primary.general_summary} />
+        <Subsections items={slice.items} />
+      ))
+    }
+</BaseLayout>

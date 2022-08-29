@@ -1,0 +1,41 @@
+---
+import RichText from '@components/RichText.astro'
+import { Picture } from '@astrojs/image/components';
+import '@styles/Card.scss'
+const { project } = Astro.props;
+const { featured_image, project_name, summary_text, github_link} = project.data;
+---
+
+<div class="card">
+    <div class="card-img-top">
+        <div>
+            {featured_image &&
+                <Picture 
+                src={featured_image.url} 
+                alt={featured_image.alt}        
+                aspectRatio="8:3" 
+                widths={[340, 463]} 
+                sizes="(min-width: 768px) 463px, ((min-width: 464px) and (max-width: 767px))  340px"
+                formats={['avif', 'jpeg', 'png', 'webp']}
+                />
+            }
+        </div>
+    </div>
+    <div class="card-body">
+        <h3>{project_name}</h3>
+        <RichText content={summary_text}/>
+        <div class="card-footer">
+            <div>
+                <a href={"/Work/projects/"+ project.uid + "/"}>More info <span class="sr-only"> about my work on {project_name}</span></a>
+            </div>
+            <div>
+                {github_link && github_link.linkType !== 'Any' &&
+                    <a href={github_link}>
+                        <i class="fab fa-github"></i> View code &nbsp; <span class="sr-only"> for {project_name}</span>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{JqW6:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),l=n.n(a),c=n("I/Ru"),s=n("phMG");t.default=function(e){return l.a.createElement(c.a,null,l.a.createElement(s.a,{title:"Uses",description:"A list of all the tech I use",pathname:e.location.pathname}),l.a.createElement("h1",null,"Uses"),l.a.createElement("p",null,"Technology I use."))}}}]);
-//# sourceMappingURL=component---src-pages-uses-js-2fd08f433a81c6b386a3.js.map
