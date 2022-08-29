@@ -24,7 +24,7 @@
     "@prismicio/client": "^6.6.4",
     "@prismicio/helpers": "^2.3.3",
     "dotenv": "^16.0.1",
-    "preact": "^10.10.6"
-   
+    "preact": "^10.10.6",
+    "rollup-plugin-scss": "^3.0.0"
   }
 }

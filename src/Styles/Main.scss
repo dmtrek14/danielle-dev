@@ -73,7 +73,7 @@ body {
             a {
                 background-image: none;
 
-                .svg-inline--fa {
+                > .svg-inline--fa {
                     margin-left: 0.3rem;
                     margin-right: 0.3rem;
                 }
@@ -88,7 +88,7 @@ body {
             padding: 0;
         }
 
-        .social {
+        &.social {
             display: grid;
             text-align: center;
 
